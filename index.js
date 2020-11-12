@@ -141,10 +141,33 @@ console.log(babyPerson.play());
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+
+  1.  Window/Global Object Binding
+
+        When you use the "this" keyword in a global scope "this" gets binded to the window/console object.
+
+  2. Implicit Binding
+
+        Whenever a dot is followd by a function the object before the dot will be what "this" is binded to.
+        const object = {
+          1stKey: 'Hi',
+          keyname: function (){
+            console.log(`${this.1stKey} world`)
+          }
+        }
+        object.keyname()
+            // output: `Hi world`
+
+  3. Explicit binding
+
+        When we use the call or apply method the "this" keyword is explicitly defined to be used with a new function. 
+
+  4. New binding
+
+        When we use a constructor function the "this" keyword refers to another specific object and returns a new object at the end.
+
+
+
 */
 
 
